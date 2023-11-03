@@ -10,7 +10,7 @@ Output: 10, 12, 18
 
 Test 3: "It should allow toppings to be added to the pizza"\
 Code: addTopping();\
-Output: 
+Output: 18.00
 
 Test 4: "It should allow toppings to be remove from pizza"\
 Code: removeTopping();\
