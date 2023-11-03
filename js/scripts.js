@@ -3,3 +3,16 @@ function Pizza(size, addToppings, removeToppings) {
     this.addToppings = addToppings;
     this.removeToppings = removeToppings;
 }
+
+Pizza.prototype.calculateCost = function () {
+    let basePrice = 10;
+    if (this.size === "small") {
+        basePrice = 10;
+    } else if (this.size === "medium") {
+        basePrice *= 1.2;
+    } else if (this.size === "large") {
+         basePrice *= 1.8;
+    }
+    return price.toFixed(2);
+    
+};
