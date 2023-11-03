@@ -18,4 +18,4 @@ Output: 12
 
 Test 5: "It should calculate the cost of the pizza after adding or removing toppings"\
 Code: updateCost();\
-Output:
+Output: 13, 12

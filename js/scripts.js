@@ -29,7 +29,7 @@ Pizza.prototype.calculateCost = function () {
         basePrice *= 1.8;
     }
 
-    const addedToppingsCost = this.toppings.length - 2;
+    const addedToppingsCost = (this.toppings.length - 2) * 1;
 
     const totalCost = basePrice + addedToppingsCost;
 
