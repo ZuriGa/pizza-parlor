@@ -37,6 +37,58 @@ Pizza.prototype.calculateCost = function () {
 
 };
 
-const pizza = new Pizza("medium", ["cheese", "mushroom", "pepperoni"]);
-pizza.removeTopping("mushroom"); // Remove a topping
-console.log(pizza.calculateCost()); // Output: "13.00"
+// UI Logic
+
+const sizeRadios = document.querySelectorAll('input[name="size"]');
+const toppingsCheckboxes = document.querySelectorAll('input[name="toppings"]');
+const calculateButton = document.getElementById("calculateButton");
+const totalCostElement = document.getElementById("totalCost");
+
+const pizza = new Pizza("small", []);
+
+sizeRadios.forEach((radio) => {
+    radio.addEventListener("change", () => {
+        pizza.size = radio.value;
+        updateTotalCost();
+    });
+});
+
+toppingsCheckboxes.forEach((checkbox) => {
+    checkbox.addEventListener("change", () => {
+        if (checkbox.checked) {
+            pizza.addTopping(checkbox.value);
+        } else {
+            pizza.removeTopping(checkbox.value);
+        }
+        updateTotalCost();
+    });
+});
+
+calculateButton.addEventListener("click", () => {
+    const message = `You ordered a ${pizza.size} pizza with toppings: ${pizza.toppings.join(", ")}. Your total cost is $${pizza.calculateCost()}.`;
+
+    const popupMessage = document.getElementById("popup-message");
+    popupMessage.textContent = message;
+
+    const popup = document.getElementById("popup");
+    popup.style.display = "block"
+
+});
+
+function closePopup() {
+    const popup = document.getElementById("popup");
+    popup.style.display = "none";
+}
+
+function updateTotalCost() {
+}
+
+updateTotalCost();
+
+function handleFormSubmission(event) {
+    event.preventDefault();
+}
+
+window.addEventListener("load", function () {
+    document.querySelector("#pizzaForm").addEventListener("submit", handleFormSubmission);
+});
