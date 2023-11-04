@@ -50,6 +50,12 @@ sizeRadios.forEach((radio) => {
     radio.addEventListener("change", () => {
         pizza.size = radio.value;
         updateTotalCost();
+
+        if (pizza.size) {
+            toppingsSection.style.display = "block";
+        } else {
+            toppingsSection.style.display = "none";
+        }
     });
 });
 
