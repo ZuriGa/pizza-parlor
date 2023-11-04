@@ -35,7 +35,7 @@ Output: 13, 12
 Click "create new fork" and then select your account as the "Owner", after this you have your own copy of this repository to your GitHub Account. 
 
 ## GitHub Pages Link:
-
+https://zuriga.github.io/pizza-parlor/
 
 ## Technology used:
 * _JavaScript_
