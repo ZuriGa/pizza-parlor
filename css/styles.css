@@ -1,15 +1,47 @@
 .header {
-    padding: 60px;
+    padding: 160px;
     text-align: center;
-    background: #1abc9c;
+    background: url(/images/PIZZA2.jpng.jpeg);
+    background-size: 100%;
     color: white;
-    font-size: 30px;
+    font-size: 80px;
+    text-shadow: 0 0 15px rgb(252, 154, 7) ;
 }
-.welcome{
+
+#about {
+    background-color: antiquewhite;
+    border-radius: 12px;
+    margin:10px;
+    font-size: 25px;
     text-align: center;
-    text-size-adjust: 9px;
 }
 
 #toppingsSection {
     display: none;
+}
+
+
+.main-box{
+    border: 2px solid blanchedalmond;
+}
+
+.box-title{
+    background-color: blanchedalmond;
+    padding:10px;
+    color:rgb(254, 147, 7);
+    font-weight:600;
+}
+
+.box-content{
+    text-align: center;
+}
+
+.box-msg{
+    font-weight: 600;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
