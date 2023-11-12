@@ -31,68 +31,29 @@
                 <div class="form-check">
                     <label for="size">Select a Size</label>
                     <br>
-                    <input type="radio" name="size" value="small" class="form-check-input">
-                    Small
-                </div>
-                <div class="form-check">
-                    <input type="radio" name="size" value="medium" class="form-check-input">
-                    Medium
-                </div>
-                <div class="form-check">
-                    <input type="radio" name="size" value="large" class="form-check-input">
-                    Large
+                    <input type="radio" name="size" value="small" class="form-check-input"><label for="size">Small</label><br />
+                    <input type="radio" name="size" value="medium" class="form-check-input"><label for="size">Medium</label><br />
+                    <input type="radio" name="size" value="large" class="form-check-input"><label for="size">Large</label>
                 </div>
                 </form>
             </div>
             <hr>
             <div class="col-md-6" id="toppingsSection">
-                <div class="form-group">
                     <label for="toppings">Choose your toppings</label>
                     <div class="form-check">
-                        <input type="checkbox" name="toppings" value="Pepperoni" class="form-check-input">
-                        Pepperoni
+                        <input type="checkbox" name="toppings" value="Pepperoni" class="form-check-input"><label for="toppings">Pepperoni</label><br />
+                        <input type="checkbox" name="toppings" value="Sausage" class="form-check-input"><label for="toppings">Sausage</label><br />
+                        <input type="checkbox" name="toppings" value="Bacon" class="form-check-input"><label for="toppings">Bacon</label><br />
+                        <input type="checkbox" name="toppings" value="Ham" class="form-check-input"><label for="toppings">Ham</label><br />
+                        <input type="checkbox" name="toppings" value="Onions" class="form-check-input"><label for="toppings">Onions</label><br />
+                        <input type="checkbox" name="toppings" value="Black olives" class="form-check-input"><label for="toppings">Black olives</label><br />
+                        <input type="checkbox" name="toppings" value="Green peppers" class="form-check-input"><label for="toppings">Green peppers</label><br />
+                        <input type="checkbox" name="toppings" value="Pineapple" class="form-check-input"><label for="toppings">Pineapple</label><br />
+                        <input type="checkbox" name="toppings" value="Artichoke" class="form-check-input"><label for="toppings">Artichoke</label><br />
+                        <input type="checkbox" name="toppings" value="Anchovy" class="form-check-input"><label for="toppings">Anchovy</label><br />
+                        <input type="checkbox" name="toppings" value="Extra-cheese" class="form-check-input"><label for="toppings">Extra cheese</label>
                     </div>
-                    <div class="form-check">
-                        <input type="checkbox" name="toppings" value="Sausage" class="form-check-input">
-                        Sausage
-                    </div>
-                    <div class="form-check">
-                        <input type="checkbox" name="toppings" value="Bacon" class="form-check-input">
-                        Bacon
-                    </div>
-                    <div class="form-check">
-                        <input type="checkbox" name="toppings" value="Ham" class="form-check-input">
-                        Ham
-                    </div>
-                    <div class="form-check">
-                        <input type="checkbox" name="toppings" value="Onions" class="form-check-input">
-                        Onions
-                    </div>
-                    <div class="form-check">
-                        <input type="checkbox" name="toppings" value="Black olives" class="form-check-input">
-                        Black olives
-                    </div>
-                    <div class="form-check">
-                        <input type="checkbox" name="toppings" value="Green peppers" class="form-check-input">
-                        Green peppers
-                    </div>
-                    <div class="form-check">
-                        <input type="checkbox" name="toppings" value="Pineapple" class="form-check-input">
-                        Pineapple
-                    </div>
-                    <div class="form-check">
-                        <input type="checkbox" name="toppings" value="Artichoke" class="form-check-input">
-                        Artichoke
-                    </div>
-                    <div class="form-check">
-                        <input type="checkbox" name="toppings" value="Anchovy" class="form-check-input">
-                        Anchovy
-                    </div>
-                    <div class="form-check">
-                        <input type="checkbox" name="toppings" value="Extra-cheese" class="form-check-input">
-                        Extra cheese
-                    </div>
-                </div>
+
             </div>
             <div>
             <button type="submit" id="calculateButton" class="btn btn-outline-info">Checkout</button>
@@ -101,7 +62,6 @@
         <div class="main-box">
         <div id="popup" class="popup">
             <div class="popop-content">
-                <span id="popup-close" class="popup-close" onclick="closePopup()"></span>
                 <div class="box-title" id="pizzaOrder">Your Pizza Order has been submitted. <small>(You can still remove toppings if needed)</small></div>
                 <p class="box-msg" id="popup-message"></p>
                 <img src="/images/pizza.gif" alt="pizzaPull" class="center">
