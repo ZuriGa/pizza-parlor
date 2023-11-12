@@ -24,21 +24,15 @@ Pizza.prototype.calculateCost = function () {
 };
 
 // UI Logic
-function handleFormSubmission(event) {
-    event.preventDefault();
-}
+function initPizzaOrder() {
 const sizeRadios = document.querySelectorAll('input[name="size"]');
 const toppingsCheckboxes = document.querySelectorAll('input[name="toppings"]');
-const toppingSection = document.getElementById("toppingsSection");
-const popup = document.getElementById("popup");
-const popupMessage = document.getElementById("popup-message");
-
+const calculateButton = document.getElementById("calculateButton");
+const toppingsSection = document.getElementById("toppingsSection");
 const pizza = new Pizza("small", []);
-
 sizeRadios.forEach((radio) => {
     radio.addEventListener("change", () => {
         pizza.size = radio.value;
-
         if (pizza.size) {
             toppingsSection.style.display = "block";
         } else {
@@ -57,13 +51,14 @@ toppingsCheckboxes.forEach((checkbox) => {
 });
 calculateButton.addEventListener("click", () => {
     const message = `You ordered a ${pizza.size} pizza with toppings: ${pizza.toppings.join(", ")}. Your total cost is $${pizza.calculateCost()}.`;
-
+    const popupMessage = document.getElementById("popup-message");
     popupMessage.textContent = message;
+    const popup = document.getElementById("popup");
     popup.style.display = "block"
-
 });
-window.addEventListener("load", function () {
-    const calculateButton = document.getElementById("calculateButton");
-    const pizzaForm = document.getElementById("pizzaForm");
-    document.querySelector("#pizzaForm").addEventListener("submit", handleFormSubmission);
-});
+function handleFormSubmission(event) {
+    event.preventDefault();
+}
+    document.querySelector("form#pizzaForm").addEventListener("submit", handleFormSubmission);
+}
+window.addEventListener("load", initPizzaOrder);
